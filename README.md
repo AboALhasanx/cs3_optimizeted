@@ -24,10 +24,10 @@ cs3/
 │   ├── validate_content_maps.py      ← Validates old JSON maps
 │   └── check_content_registry.py     ← Smoke-test for ContentRegistry
 ├── legacy/
-│   ├── terms_btn2cmd.json            ← Orphan duplicate (archive only)
-│   └── terms_cmd2values.json         ← Orphan duplicate (archive only)
-├── cs3_terms_btn2cmd.json            ← Old map (temporary, validation)
-└── cs3_terms_cmd2values.json         ← Old map (temporary, validation)
+│   ├── cs3_terms_btn2cmd.json        ← Old map (archived, validation)
+│   ├── cs3_terms_cmd2values.json     ← Old map (archived, validation)
+│   ├── terms_btn2cmd.json            ← CRLF duplicate (archive only)
+│   └── terms_cmd2values.json         ← CRLF duplicate (archive only)
 ```
 
 ---
@@ -87,44 +87,29 @@ edit the old JSON files listed below.
 
 ---
 
-## 3. Old JSON Maps (Temporary, Validation Only)
+## 3. Legacy JSON Maps (Archived, Validation Only)
 
-The following files are **kept temporarily** for cross-validation during
-the migration. They are **not** read by the running bot.
+All old mapping files now live in the `legacy/` directory. They are
+**not** read by the running bot; they are kept for historical reference
+and cross-validation.
 
-- `cs3_terms_btn2cmd.json` — maps button labels → command keys
-- `cs3_terms_cmd2values.json` — maps command keys → message IDs
+- `legacy/cs3_terms_btn2cmd.json` — maps button labels → command keys
+- `legacy/cs3_terms_cmd2values.json` — maps command keys → message IDs
+- `legacy/terms_btn2cmd.json` — CRLF duplicate of the above (archive)
+- `legacy/terms_cmd2values.json` — CRLF duplicate of the above (archive)
 
-These files remain in the project root so that
-`scripts/validate_content_items.py` can compare them against
-`data/content_items.json` and confirm the migration preserves all
-existing data.
-
-Once the migration is fully stable across all environments, these files
-may be moved to `legacy/`.
+The `cs3_terms_*` files contain the same logical data as the `terms_*`
+files; they differ only in line endings (LF vs. CRLF).
 
 ---
 
-## 4. Legacy Duplicates (Archive Only)
-
-The `legacy/` directory contains orphan duplicates that were created
-(probably by a Windows editor) with CRLF line endings:
-
-- `legacy/terms_btn2cmd.json`
-- `legacy/terms_cmd2values.json`
-
-These are **logically identical** to the `cs3_terms_*` files in the root
-(except for line endings). They are kept for historical reference only
-and are not used by any script or runtime code.
-
----
-
-## 5. Validation: New Catalog vs. Old Maps
+## 4. Validation: New Catalog vs. Legacy Maps
 
 **`scripts/validate_content_items.py`** is the primary validation tool.
 
-It loads `data/content_items.json` and cross-checks it against the old
-`cs3_terms_btn2cmd.json` and `cs3_terms_cmd2values.json` files:
+It loads `data/content_items.json` and cross-checks it against the
+legacy `legacy/cs3_terms_btn2cmd.json` and
+`legacy/cs3_terms_cmd2values.json` files:
 
 - Verifies every button label matches
 - Verifies every command key matches
@@ -139,11 +124,11 @@ python scripts\validate_content_items.py
 
 ---
 
-## 6. Validation: Old Maps Only
+## 5. Validation: Legacy Maps Only
 
-**`scripts/validate_content_maps.py`** validates the old
-`cs3_terms_btn2cmd.json` and `cs3_terms_cmd2values.json` files
-independently. It checks for:
+**`scripts/validate_content_maps.py`** validates the legacy
+`legacy/cs3_terms_btn2cmd.json` and `legacy/cs3_terms_cmd2values.json`
+files independently. It checks for:
 
 - Orphaned command keys
 - Null or empty-list values
@@ -158,7 +143,7 @@ python scripts\validate_content_maps.py
 
 ---
 
-## 7. Smoke-Test for ContentRegistry
+## 6. Smoke-Test for ContentRegistry
 
 **`scripts/check_content_registry.py`** is a quick health-check that
 instantiates `ContentRegistry`, loads the catalog, and runs the full
@@ -180,9 +165,9 @@ ContentRegistry loaded successfully.
 
 ---
 
-## 8. Adding or Updating Content
+## 7. Adding or Updating Content
 
-**Do not** edit `cs3_terms_btn2cmd.json` or `cs3_terms_cmd2values.json`
+**Do not** edit the legacy JSON files in the `legacy/` directory
 for new content. Instead:
 
 1. Add or update an entry in `data/content_items.json`.

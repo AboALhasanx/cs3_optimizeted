@@ -3,7 +3,8 @@
 validate_content_items.py — Audit tool for data/content_items.json.
 
 Reads the new unified content catalog and cross-checks it against the
-original cs3_terms_btn2cmd.json and cs3_terms_cmd2values.json files.
+original cs3_terms_btn2cmd.json and cs3_terms_cmd2values.json files
+(now located in the legacy/ directory).
 This is a read-only audit; it always exits 0.
 
 Usage:
@@ -23,8 +24,8 @@ if _project_root not in sys.path:
     sys.path.insert(0, _project_root)
 
 CONTENT_ITEMS_PATH = _osp.join(_project_root, 'data', 'content_items.json')
-BTN2CMD_PATH = _osp.join(_project_root, 'cs3_terms_btn2cmd.json')
-CMD2VALUES_PATH = _osp.join(_project_root, 'cs3_terms_cmd2values.json')
+BTN2CMD_PATH = _osp.join(_project_root, 'legacy', 'cs3_terms_btn2cmd.json')
+CMD2VALUES_PATH = _osp.join(_project_root, 'legacy', 'cs3_terms_cmd2values.json')
 
 
 def load_json(path, label):

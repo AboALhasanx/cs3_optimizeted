@@ -2,8 +2,9 @@
 """
 validate_content_maps.py — Audit tool for cs3 JSON mapping files.
 
-Reads the active btn2cmd and cmd2values files via app_paths and runs
-integrity checks.  This is a read-only audit; it always exits 0.
+Validates the legacy btn2cmd and cmd2values JSON files (now in legacy/).
+These files are kept for historical reference and are not used at runtime.
+This is a read-only audit; it always exits 0.
 
 Usage:
     python scripts/validate_content_maps.py
@@ -23,7 +24,8 @@ _project_root = _osp.abspath(_osp.join(_script_dir, '..'))
 if _project_root not in sys.path:
     sys.path.insert(0, _project_root)
 
-from app_paths import BTN2CMD_PATH, CMD2VALUES_PATH
+BTN2CMD_PATH = _osp.join(_project_root, 'legacy', 'cs3_terms_btn2cmd.json')
+CMD2VALUES_PATH = _osp.join(_project_root, 'legacy', 'cs3_terms_cmd2values.json')
 
 
 def load_json(path, label):
