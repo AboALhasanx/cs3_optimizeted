@@ -48,3 +48,7 @@ cs_stg3_onefile = required_int("CS_STG3_ONEFILE")
 cs_stg3_deleted = required_int("CS_STG3_DELETED")
 cs_apps = required_int("CS_APPS")
 LOG_CHANNEL_ID = required_int("LOG_CHANNEL_ID")
+
+# Optional Telegram proxy URL (e.g. socks5h://127.0.0.1:9050 for Tor).
+# Leave empty for a direct connection.
+TELEGRAM_PROXY_URL = os.getenv("TELEGRAM_PROXY_URL", "").strip()

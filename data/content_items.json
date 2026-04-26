@@ -1235,5 +1235,25 @@
             26
         ],
         "active": true
+    },
+    {
+        "id": 111,
+        "button_label": "📇 جدول محاضرات الكورس الاول 📇",
+        "command_key": "term1_table_of_lectures",
+        "channel_key": "cs_stg3",
+        "message_ids": [
+            150
+        ],
+        "active": true
+    },
+    {
+        "id": 112,
+        "button_label": "📇 جدول محاضرات الكورس الثاني 📇",
+        "command_key": "term2_table_of_lectures",
+        "channel_key": "cs_stg3",
+        "message_ids": [
+            151
+        ],
+        "active": true
     }
 ]

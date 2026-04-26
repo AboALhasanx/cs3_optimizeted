@@ -164,6 +164,23 @@ ContentRegistry loaded successfully.
 
 ---
 
+## 6. Telegram Proxy
+
+The bot supports an optional proxy for connecting to Telegram (e.g., via
+Tor). Configure it through the `TELEGRAM_PROXY_URL` environment variable.
+
+- **Leave it empty** (default) for a direct connection.
+- **Set it** to a SOCKS5 URL to route traffic through a proxy:
+
+  ```
+  TELEGRAM_PROXY_URL=socks5h://127.0.0.1:9050
+  ```
+
+The value is read from `.env` or the system environment. No changes to
+`main.py` are needed.
+
+---
+
 ## 7. Adding or Updating Content
 
 **Do not** edit the legacy JSON files in the `legacy/` directory
@@ -183,7 +200,7 @@ truth and the old JSON files are only used for validation comparison.
 
 ```powershell
 # Compile all Python files
-python -m py_compile main.py services\content_registry.py scripts\*.py app_paths.py
+python -m py_compile main.py services\content_registry.py scripts\*.py
 
 # Run all validators
 python scripts\validate_content_items.py

@@ -2,23 +2,25 @@ import telebot
 import random
 import requests
 from telebot import apihelper
-apihelper.proxy = {'https': 'socks5h://127.0.0.1:9050'}
 
 # =========[ استيراد البيانات من الملفات الأخرى ]=========
 from config import (
     ADMIN_ID,
     BOT_TOKEN,
     LOG_CHANNEL_ID,
+    TELEGRAM_PROXY_URL,
     cs_stg3,
     cs_stg3_onefile,
     cs_stg3_deleted,
     cs_apps
 )
 
+if TELEGRAM_PROXY_URL:
+    apihelper.proxy = {"https": TELEGRAM_PROXY_URL}
+
 from global_vars import (
     about_bot_msg,
     back_term1,
-    term1_Table_of_lectures,
     chose_from,
     networks1_lab_title,
     networks1_theo_title,
@@ -33,7 +35,6 @@ from global_vars import (
     english_title,
     operations_research_title,
     back_term2,
-    term2_Table_of_lectures,
     networks2_lab_title,
     networks2_theo_title,
     data_enc_lab_title,
@@ -408,14 +409,6 @@ def operations_research_redirect(message):
     check_and_respond(message, respond)
 
 
-@bot.message_handler(func=lambda msg: msg.text == term1_Table_of_lectures)
-def term1_table_redirect(message):
-    log_and_forward(message)
-    def respond(msg):
-        bot.forward_message(msg.chat.id, cs_stg3, 150)
-    check_and_respond(message, respond)
-
-
 # =========[ الكورس الثاني ]=========
 @bot.message_handler(commands=['term2'])
 def cmd_term2(message):
@@ -521,14 +514,6 @@ def data_mining_theo_redirect(message):
     check_and_respond(message, respond)
 
 
-@bot.message_handler(func=lambda msg: msg.text == term2_Table_of_lectures)
-def term2_table_redirect(message):
-    log_and_forward(message)
-    def respond(msg):
-        bot.forward_message(msg.chat.id, cs_stg3, 151)
-    check_and_respond(message, respond)
-
-
 # =========[ أزرار الرجوع و الرئيسية ]=========
 @bot.message_handler(func=lambda msg: msg.text == back_term1)
 def return_to_term1_menu(message):
@@ -593,6 +578,13 @@ def get_file_command(message, command):
             bot.forward_message(message.chat.id, CHANNEL_ID, post_id)
         bot.reply_to(message, message_text)
     except Exception as e:
+        print("[forward] failed")
+        print(f"  command={command}")
+        print(f"  channel_key={content.get('channel_key')}")
+        print(f"  channel_id={CHANNEL_ID}")
+        print(f"  message_ids={message_ids}")
+        print(f"  error_type={type(e).__name__}")
+        print(f"  error={e}")
         bot.reply_to(message, "💢اكو مشكلة من البوت.\n حاول مرة ثانية")
 
 def log_and_forward(message):
