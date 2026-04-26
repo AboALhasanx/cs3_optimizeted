@@ -20,13 +20,7 @@ cs3/
 │   └── content_registry.py           ← Reads & validates the catalog
 ├── scripts/
 │   ├── validate_content_items.py     ← Validates content_items.json
-│   ├── validate_content_maps.py      ← Validates old JSON maps
 │   └── check_content_registry.py     ← Smoke-test for ContentRegistry
-├── legacy/
-│   ├── cs3_terms_btn2cmd.json        ← Old map (archived, validation)
-│   ├── cs3_terms_cmd2values.json     ← Old map (archived, validation)
-│   ├── terms_btn2cmd.json            ← CRLF duplicate (archive only)
-│   └── terms_cmd2values.json         ← CRLF duplicate (archive only)
 ```
 
 ---
@@ -84,36 +78,15 @@ Each entry contains:
 **Adding new content**: edit only `data/content_items.json`. Do **not**
 edit the old JSON files listed below.
 
----
+## 3. Validation
 
-## 3. Legacy JSON Maps (Archived, Validation Only)
+**`scripts/validate_content_items.py`** validates the catalog in
+isolation:
 
-All old mapping files now live in the `legacy/` directory. They are
-**not** read by the running bot; they are kept for historical reference
-and cross-validation.
-
-- `legacy/cs3_terms_btn2cmd.json` — maps button labels → command keys
-- `legacy/cs3_terms_cmd2values.json` — maps command keys → message IDs
-- `legacy/terms_btn2cmd.json` — CRLF duplicate of the above (archive)
-- `legacy/terms_cmd2values.json` — CRLF duplicate of the above (archive)
-
-The `cs3_terms_*` files contain the same logical data as the `terms_*`
-files; they differ only in line endings (LF vs. CRLF).
-
----
-
-## 4. Validation: New Catalog vs. Legacy Maps
-
-**`scripts/validate_content_items.py`** is the primary validation tool.
-
-It loads `data/content_items.json` and cross-checks it against the
-legacy `legacy/cs3_terms_btn2cmd.json` and
-`legacy/cs3_terms_cmd2values.json` files:
-
-- Verifies every button label matches
-- Verifies every command key matches
-- Verifies every message ID matches (after normalising scalars to lists)
-- Checks for duplicates, nulls, empty lists, and missing fields
+- Counts total / active / inactive items
+- Checks for duplicate `button_label` and `command_key`
+- Verifies all active items have a `channel_key`, non-empty
+  `message_ids`, and integer message IDs
 
 Run it with:
 
@@ -123,26 +96,7 @@ python scripts\validate_content_items.py
 
 ---
 
-## 5. Validation: Legacy Maps Only
-
-**`scripts/validate_content_maps.py`** validates the legacy
-`legacy/cs3_terms_btn2cmd.json` and `legacy/cs3_terms_cmd2values.json`
-files independently. It checks for:
-
-- Orphaned command keys
-- Null or empty-list values
-- Duplicate command mappings
-
-This script remains useful as long as the old files are kept. Run it
-with:
-
-```powershell
-python scripts\validate_content_maps.py
-```
-
----
-
-## 6. Smoke-Test for ContentRegistry
+## 4. Smoke-Test for ContentRegistry
 
 **`scripts/check_content_registry.py`** is a quick health-check that
 instantiates `ContentRegistry`, loads the catalog, and runs the full
@@ -156,15 +110,15 @@ Expected output (when all checks pass):
 
 ```
 ContentRegistry loaded successfully.
-  button_to_command entries: 110
-  command_to_content entries: 110
+  button_to_command entries: 112
+  command_to_content entries: 112
   ...
   Summary: 10 passed, 0 warnings
 ```
 
 ---
 
-## 6. Telegram Proxy
+## 5. Telegram Proxy
 
 The bot supports an optional proxy for connecting to Telegram (e.g., via
 Tor). Configure it through the `TELEGRAM_PROXY_URL` environment variable.
@@ -181,18 +135,14 @@ The value is read from `.env` or the system environment. No changes to
 
 ---
 
-## 7. Adding or Updating Content
+## 6. Adding or Updating Content
 
-**Do not** edit the legacy JSON files in the `legacy/` directory
-for new content. Instead:
+Edit only `data/content_items.json` to add or update content:
 
 1. Add or update an entry in `data/content_items.json`.
 2. Run `python scripts\validate_content_items.py` to verify integrity.
 3. Run `python scripts\check_content_registry.py` to check the registry.
 4. Restart the bot (its main loop reads the catalog on startup).
-
-This ensures that `data/content_items.json` remains the single point of
-truth and the old JSON files are only used for validation comparison.
 
 ---
 
@@ -204,6 +154,5 @@ python -m py_compile main.py services\content_registry.py scripts\*.py
 
 # Run all validators
 python scripts\validate_content_items.py
-python scripts\validate_content_maps.py
 python scripts\check_content_registry.py
 ```

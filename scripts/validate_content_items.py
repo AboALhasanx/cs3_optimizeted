@@ -2,9 +2,7 @@
 """
 validate_content_items.py — Audit tool for data/content_items.json.
 
-Reads the new unified content catalog and cross-checks it against the
-original cs3_terms_btn2cmd.json and cs3_terms_cmd2values.json files
-(now located in the legacy/ directory).
+Validates the unified content catalog in isolation.
 This is a read-only audit; it always exits 0.
 
 Usage:
@@ -24,8 +22,6 @@ if _project_root not in sys.path:
     sys.path.insert(0, _project_root)
 
 CONTENT_ITEMS_PATH = _osp.join(_project_root, 'data', 'content_items.json')
-BTN2CMD_PATH = _osp.join(_project_root, 'legacy', 'cs3_terms_btn2cmd.json')
-CMD2VALUES_PATH = _osp.join(_project_root, 'legacy', 'cs3_terms_cmd2values.json')
 
 
 def load_json(path, label):
@@ -39,39 +35,15 @@ def load_json(path, label):
         return None, f"{label}: invalid JSON: {e}"
 
 
-def normalize_ids(value):
-    """Convert a scalar int to a single-element list; keep lists as-is."""
-    if isinstance(value, int):
-        return [value]
-    if isinstance(value, list):
-        return value
-    return []
-
-
 def main():
     warnings = []
 
     # ------------------------------------------------------------------
-    # 1. Load all three files
+    # 1. Load content_items.json
     # ------------------------------------------------------------------
     items, err = load_json(CONTENT_ITEMS_PATH, "content_items")
     if err:
         print(f"[FAIL] {err}")
-        sys.exit(0)
-
-    btn2cmd, err = load_json(BTN2CMD_PATH, "btn2cmd")
-    if err:
-        print(f"[FAIL] {err}")
-        sys.exit(0)
-
-    cmd2values, err = load_json(CMD2VALUES_PATH, "cmd2values")
-    if err:
-        print(f"[FAIL] {err}")
-        sys.exit(0)
-
-    commands = cmd2values.get('commands', {})
-    if not isinstance(commands, dict):
-        print("[FAIL] cmd2values['commands'] is not a dict")
         sys.exit(0)
 
     # ------------------------------------------------------------------
@@ -100,7 +72,7 @@ def main():
         warnings.append(f"{len(dup_labels)} duplicate button_label(s)")
         print(f"[WARN]  {warnings[-1]}:")
         for label, ids in sorted(dup_labels.items()):
-            print(f"        {label!r} appears in ids {ids}")
+            print(f"        id(s) {ids} label={ascii(label)}")
         print()
     else:
         print("[OK]    No duplicate button_labels")
@@ -128,7 +100,35 @@ def main():
         print()
 
     # ------------------------------------------------------------------
-    # 5. Missing channel_key for active items
+    # 5. Missing button_label
+    # ------------------------------------------------------------------
+    missing_label = [i for i in items if not i.get('button_label')]
+    if missing_label:
+        warnings.append(f"{len(missing_label)} item(s) have missing button_label")
+        print(f"[WARN]  {warnings[-1]}:")
+        for item in missing_label:
+            print(f"        id={item['id']}")
+        print()
+    else:
+        print("[OK]    All items have a button_label")
+        print()
+
+    # ------------------------------------------------------------------
+    # 6. Missing command_key
+    # ------------------------------------------------------------------
+    missing_cmd = [i for i in items if not i.get('command_key')]
+    if missing_cmd:
+        warnings.append(f"{len(missing_cmd)} item(s) have missing command_key")
+        print(f"[WARN]  {warnings[-1]}:")
+        for item in missing_cmd:
+            print(f"        id={item['id']}")
+        print()
+    else:
+        print("[OK]    All items have a command_key")
+        print()
+
+    # ------------------------------------------------------------------
+    # 7. Missing channel_key for active items
     # ------------------------------------------------------------------
     missing_channel = [i for i in active if not i.get('channel_key')]
     if missing_channel:
@@ -144,7 +144,7 @@ def main():
         print()
 
     # ------------------------------------------------------------------
-    # 6. Empty message_ids for active items
+    # 8. Empty message_ids for active items
     # ------------------------------------------------------------------
     empty_ids = [i for i in active if not i.get('message_ids')]
     if empty_ids:
@@ -160,7 +160,7 @@ def main():
         print()
 
     # ------------------------------------------------------------------
-    # 7. All message_ids are integers (not strings, floats, etc.)
+    # 9. All message_ids are integers (not strings, floats, etc.)
     # ------------------------------------------------------------------
     bad_ids = []
     for item in active:
@@ -180,96 +180,7 @@ def main():
         print()
 
     # ------------------------------------------------------------------
-    # 8. Cross-check: button labels match btn2cmd keys
-    # ------------------------------------------------------------------
-    btn2cmd_labels = set(btn2cmd.keys())
-    content_labels = set(i['button_label'] for i in items)
-
-    missing_labels = btn2cmd_labels - content_labels
-    extra_labels = content_labels - btn2cmd_labels
-    if missing_labels:
-        warnings.append(
-            f"{len(missing_labels)} label(s) in btn2cmd missing from content_items"
-        )
-        print(f"[WARN]  {warnings[-1]}:")
-        for lbl in sorted(missing_labels):
-            print(f"        {lbl!r}")
-        print()
-    if extra_labels:
-        warnings.append(
-            f"{len(extra_labels)} label(s) in content_items not in btn2cmd"
-        )
-        print(f"[WARN]  {warnings[-1]}:")
-        for lbl in sorted(extra_labels):
-            print(f"        {lbl!r}")
-        print()
-    if not missing_labels and not extra_labels:
-        print("[OK]    All button_labels match btn2cmd")
-        print()
-
-    # ------------------------------------------------------------------
-    # 9. Cross-check: command keys match btn2cmd values
-    # ------------------------------------------------------------------
-    btn2cmd_commands = set(btn2cmd.values())
-    content_commands = set(i['command_key'] for i in items)
-
-    missing_cmds = btn2cmd_commands - content_commands
-    extra_cmds = content_commands - btn2cmd_commands
-    if missing_cmds:
-        warnings.append(
-            f"{len(missing_cmds)} command_key(s) in btn2cmd missing from "
-            f"content_items"
-        )
-        print(f"[WARN]  {warnings[-1]}:")
-        for cmd in sorted(missing_cmds):
-            print(f"        {cmd!r}")
-        print()
-    if extra_cmds:
-        warnings.append(
-            f"{len(extra_cmds)} command_key(s) in content_items not in btn2cmd"
-        )
-        print(f"[WARN]  {warnings[-1]}:")
-        for cmd in sorted(extra_cmds):
-            print(f"        {cmd!r}")
-        print()
-    if not missing_cmds and not extra_cmds:
-        print("[OK]    All command_keys match btn2cmd")
-        print()
-
-    # ------------------------------------------------------------------
-    # 10. Cross-check: message IDs match cmd2values (normalized)
-    # ------------------------------------------------------------------
-    mismatched_ids = []
-    for item in active:
-        cmd = item['command_key']
-        expected_raw = commands.get(cmd)
-        if expected_raw is None:
-            mismatched_ids.append((item['id'], cmd, 'missing_from_cmd2values', []))
-            continue
-
-        expected_ids = normalize_ids(expected_raw)
-        actual_ids = item.get('message_ids', [])
-
-        # Sort both for comparison since order might differ
-        if sorted(actual_ids) != sorted(expected_ids):
-            mismatched_ids.append((item['id'], cmd, expected_ids, actual_ids))
-
-    if mismatched_ids:
-        warnings.append(
-            f"{len(mismatched_ids)} item(s) with message_ids mismatch"
-        )
-        print(f"[WARN]  {warnings[-1]}:")
-        for item_id, cmd, expected, actual in mismatched_ids:
-            print(f"        id={item_id} cmd={cmd!r}")
-            print(f"          expected={expected}")
-            print(f"          actual  ={actual}")
-        print()
-    else:
-        print("[OK]    All message_ids match cmd2values (after normalization)")
-        print()
-
-    # ------------------------------------------------------------------
-    # 11. Summary
+    # 10. Summary
     # ------------------------------------------------------------------
     print("=" * 55)
     print("SUMMARY")
