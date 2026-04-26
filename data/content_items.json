@@ -1,0 +1,1239 @@
+[
+    {
+        "id": 1,
+        "button_label": "المادة في ملف واحد كاملة 📁🤖",
+        "command_key": "ai_lab_in_old",
+        "channel_key": "cs_stg3_deleted",
+        "message_ids": [
+            36
+        ],
+        "active": true
+    },
+    {
+        "id": 2,
+        "button_label": "كل جابتر بملف 🗂 🤖",
+        "command_key": "ai_lab_lectures",
+        "channel_key": "cs_stg3_onefile",
+        "message_ids": [
+            236,
+            237,
+            238,
+            239,
+            243,
+            271
+        ],
+        "active": true
+    },
+    {
+        "id": 3,
+        "button_label": "ملخصات و توضيحات 📝 🤖",
+        "command_key": "ai_lab_summarize_lectures",
+        "channel_key": "cs_stg3_onefile",
+        "message_ids": [
+            288,
+            287,
+            290
+        ],
+        "active": true
+    },
+    {
+        "id": 4,
+        "button_label": "مادة السنة السابقة 🕐 🤖",
+        "command_key": "ai_lab_old",
+        "channel_key": "cs_stg3_deleted",
+        "message_ids": [
+            9
+        ],
+        "active": true
+    },
+    {
+        "id": 5,
+        "button_label": "البرنامج الي نطبق عليه Jupyter 💻 🤖",
+        "command_key": "ai_lab_app",
+        "channel_key": "cs_apps",
+        "message_ids": [
+            57,
+            58
+        ],
+        "active": true
+    },
+    {
+        "id": 6,
+        "button_label": "المحاضرات في ملف واحد كاملة 📁 🤖",
+        "command_key": "ai_theo_in_old",
+        "channel_key": "cs_stg3_deleted",
+        "message_ids": [
+            42
+        ],
+        "active": true
+    },
+    {
+        "id": 7,
+        "button_label": "كل جابتر في ملف 🗂 🤖",
+        "command_key": "ai_theo_lectures",
+        "channel_key": "cs_stg3_onefile",
+        "message_ids": [
+            186,
+            187,
+            188,
+            257,
+            258
+        ],
+        "active": true
+    },
+    {
+        "id": 8,
+        "button_label": "المحاضرات + الترجمة في ملف واحد كاملة 🇮🇶 🤖",
+        "command_key": "ai_theo_ar_all_lectures",
+        "channel_key": "cs_stg3_onefile",
+        "message_ids": [
+            189
+        ],
+        "active": true
+    },
+    {
+        "id": 9,
+        "button_label": "ملخصات وتوضيحات 📝 🤖",
+        "command_key": "ai_theo_summarize_lectures",
+        "channel_key": "cs_stg3_onefile",
+        "message_ids": [
+            241,
+            299
+        ],
+        "active": true
+    },
+    {
+        "id": 10,
+        "button_label": "اسئلة وحلول 📝 🤖",
+        "command_key": "ai_theo_qa_lectures",
+        "channel_key": "cs_stg3_onefile",
+        "message_ids": [
+            299
+        ],
+        "active": true
+    },
+    {
+        "id": 11,
+        "button_label": "محاضرات السنة السابقة 🕐 🤖",
+        "command_key": "ai_theo_old",
+        "channel_key": "cs_stg3_deleted",
+        "message_ids": [
+            10
+        ],
+        "active": true
+    },
+    {
+        "id": 12,
+        "button_label": "المادة في ملف واحد كاملة 📁📐",
+        "command_key": "software_engineering_lab_in_old",
+        "channel_key": "cs_stg3_deleted",
+        "message_ids": [
+            37
+        ],
+        "active": true
+    },
+    {
+        "id": 13,
+        "button_label": "كل جابتر  بملف 🗂 📐",
+        "command_key": "software_engineering_lab_lectures",
+        "channel_key": "cs_stg3_onefile",
+        "message_ids": [
+            168,
+            169,
+            220,
+            263
+        ],
+        "active": true
+    },
+    {
+        "id": 14,
+        "button_label": "ملخصات وتوضيحات 📝 📐",
+        "command_key": "software_engineering_lab_summarize_lectures",
+        "channel_key": "cs_stg3_onefile",
+        "message_ids": [
+            286
+        ],
+        "active": true
+    },
+    {
+        "id": 15,
+        "button_label": "مادة السنة السابقة 🕐 📐",
+        "command_key": "software_engineering_lab_old",
+        "channel_key": "cs_stg3_deleted",
+        "message_ids": [
+            15
+        ],
+        "active": true
+    },
+    {
+        "id": 16,
+        "button_label": "البرنامج الي نطبق عليه Jupyter 💻 📐",
+        "command_key": "software_engineering_lab_app",
+        "channel_key": "cs_apps",
+        "message_ids": [
+            57,
+            58
+        ],
+        "active": true
+    },
+    {
+        "id": 17,
+        "button_label": "المحاضرات في ملف واحد كاملة 📁 📐",
+        "command_key": "software_engineering_theo_in_old",
+        "channel_key": "cs_stg3_deleted",
+        "message_ids": [
+            39
+        ],
+        "active": true
+    },
+    {
+        "id": 18,
+        "button_label": "كل جابتر في ملف 🗂 📐",
+        "command_key": "software_engineering_theo_lectures",
+        "channel_key": "cs_stg3_onefile",
+        "message_ids": [
+            182,
+            183,
+            184,
+            185,
+            190,
+            204,
+            259
+        ],
+        "active": true
+    },
+    {
+        "id": 19,
+        "button_label": "المحاضرات + الترجمة في ملف واحد كاملة 🇮🇶 📐",
+        "command_key": "software_engineering_theo_ar_all_lectures",
+        "channel_key": "cs_stg3_onefile",
+        "message_ids": [
+            276
+        ],
+        "active": true
+    },
+    {
+        "id": 20,
+        "button_label": "كل جابتر مترجم في ملف 🇮🇶 📐",
+        "command_key": "software_engineering_theo_ar_lectures",
+        "channel_key": "cs_stg3_onefile",
+        "message_ids": [
+            217,
+            216,
+            215,
+            214,
+            213,
+            260,
+            261
+        ],
+        "active": true
+    },
+    {
+        "id": 21,
+        "button_label": "ملخصات و توضيحات 📝 📐",
+        "command_key": "software_engineering_theo_summarize_lectures",
+        "channel_key": "cs_stg3_onefile",
+        "message_ids": [
+            284,
+            283,
+            281,
+            280,
+            277
+        ],
+        "active": true
+    },
+    {
+        "id": 22,
+        "button_label": "اسئلة وحلول 📝 📐",
+        "command_key": "software_engineering_theo_qa_lectures",
+        "channel_key": "cs_stg3_onefile",
+        "message_ids": [
+            293
+        ],
+        "active": true
+    },
+    {
+        "id": 23,
+        "button_label": "محاضرات السنة السابقة 🕐 📐",
+        "command_key": "software_engineering_theo_old",
+        "channel_key": "cs_stg3_deleted",
+        "message_ids": [
+            16
+        ],
+        "active": true
+    },
+    {
+        "id": 24,
+        "button_label": "المادة في ملف واحد كاملة 📁🖼️",
+        "command_key": "multimedia_lab_in_old",
+        "channel_key": "cs_stg3_deleted",
+        "message_ids": [
+            35
+        ],
+        "active": true
+    },
+    {
+        "id": 25,
+        "button_label": "مادة السنة السابقة 🕐 🖼️",
+        "command_key": "multimedia_lab_old",
+        "channel_key": "cs_stg3_deleted",
+        "message_ids": [
+            17
+        ],
+        "active": true
+    },
+    {
+        "id": 26,
+        "button_label": "البرامج الي نطبق عليها 💻 🖼️",
+        "command_key": "multimedia_lab_app",
+        "channel_key": "cs_apps",
+        "message_ids": [
+            15,
+            16,
+            51,
+            52,
+            12,
+            13
+        ],
+        "active": true
+    },
+    {
+        "id": 27,
+        "button_label": "المحاضرات في ملف واحد كاملة 📁 🖼️",
+        "command_key": "multimedia_theo_in_old",
+        "channel_key": "cs_stg3_deleted",
+        "message_ids": [
+            44
+        ],
+        "active": true
+    },
+    {
+        "id": 28,
+        "button_label": "كل جابتر في ملف 🗂 🖼️",
+        "command_key": "multimedia_theo_lectures",
+        "channel_key": "cs_stg3_onefile",
+        "message_ids": [
+            210,
+            209,
+            208,
+            246,
+            247
+        ],
+        "active": true
+    },
+    {
+        "id": 29,
+        "button_label": "ملخصات وتوضيحات 📝 🖼️",
+        "command_key": "multimedia_theo_summarize_lectures",
+        "channel_key": "cs_stg3_onefile",
+        "message_ids": [
+            211,
+            212
+        ],
+        "active": true
+    },
+    {
+        "id": 30,
+        "button_label": "اسئلة وحلول 📝 🖼️",
+        "command_key": "multimedia_theo_qa_lectures",
+        "channel_key": "cs_stg3_onefile",
+        "message_ids": [
+            292
+        ],
+        "active": true
+    },
+    {
+        "id": 31,
+        "button_label": "محاضرات السنة السابقة 🕐 🖼️",
+        "command_key": "multimedia_theo_old",
+        "channel_key": "cs_stg3_deleted",
+        "message_ids": [
+            18
+        ],
+        "active": true
+    },
+    {
+        "id": 32,
+        "button_label": "المادة في ملف واحد كاملة 📁🔌",
+        "command_key": "networks1_lab_in_old",
+        "channel_key": "cs_stg3_deleted",
+        "message_ids": [
+            38
+        ],
+        "active": true
+    },
+    {
+        "id": 33,
+        "button_label": "كل جابتر  بملف 🗂 🔌",
+        "command_key": "networks1_lab_lectures",
+        "channel_key": "cs_stg3_onefile",
+        "message_ids": [
+            221,
+            222,
+            223,
+            253,
+            265
+        ],
+        "active": true
+    },
+    {
+        "id": 34,
+        "button_label": "مادة السنة السابقة 🕐 🔌",
+        "command_key": "networks1_lab_old",
+        "channel_key": "cs_stg3_deleted",
+        "message_ids": [
+            11
+        ],
+        "active": true
+    },
+    {
+        "id": 35,
+        "button_label": "البرنامج الي نطبق عليه Cisco Packet Tracer 💻 🔌",
+        "command_key": "networks1_lab_app",
+        "channel_key": "cs_apps",
+        "message_ids": [
+            33,
+            34
+        ],
+        "active": true
+    },
+    {
+        "id": 36,
+        "button_label": "المحاضرات في ملف واحد كاملة 📁 🔌",
+        "command_key": "networks1_theo_in_old",
+        "channel_key": "cs_stg3_deleted",
+        "message_ids": [
+            41
+        ],
+        "active": true
+    },
+    {
+        "id": 37,
+        "button_label": "كل جابتر في ملف 🗂 🔌",
+        "command_key": "networks1_theo_lectures",
+        "channel_key": "cs_stg3_onefile",
+        "message_ids": [
+            181,
+            180,
+            179,
+            178,
+            177,
+            176
+        ],
+        "active": true
+    },
+    {
+        "id": 38,
+        "button_label": "المحاضرات + الترجمة في ملف واحد كاملة 🇮🇶 🔌",
+        "command_key": "networks1_theo_ar_all_lectures",
+        "channel_key": "cs_stg3_onefile",
+        "message_ids": [
+            298
+        ],
+        "active": true
+    },
+    {
+        "id": 39,
+        "button_label": "كل جابتر مترجم في ملف 🇮🇶 🔌",
+        "command_key": "networks1_theo_ar_lectures",
+        "channel_key": "cs_stg3_onefile",
+        "message_ids": [
+            234,
+            235,
+            240,
+            226,
+            264,
+            267
+        ],
+        "active": true
+    },
+    {
+        "id": 40,
+        "button_label": "ملخصات وتوضيحات 📝 🔌",
+        "command_key": "networks1_theo_summarize_lectures",
+        "channel_key": "cs_stg3_onefile",
+        "message_ids": [
+            295,
+            296
+        ],
+        "active": true
+    },
+    {
+        "id": 41,
+        "button_label": "اسئلة وحلول 📝 🔌",
+        "command_key": "networks1_theo_qa_lectures",
+        "channel_key": "cs_stg3_onefile",
+        "message_ids": [
+            297
+        ],
+        "active": true
+    },
+    {
+        "id": 42,
+        "button_label": "محاضرات السنة السابقة 🕐 🔌",
+        "command_key": "networks1_theo_old",
+        "channel_key": "cs_stg3_deleted",
+        "message_ids": [
+            12
+        ],
+        "active": true
+    },
+    {
+        "id": 43,
+        "button_label": "المادة في ملف واحد كاملة 📁🧮",
+        "command_key": "compilers1_lab_in_old",
+        "channel_key": "cs_stg3_deleted",
+        "message_ids": [
+            34
+        ],
+        "active": true
+    },
+    {
+        "id": 44,
+        "button_label": "كل جابتر  بملف 🗂 🧮",
+        "command_key": "compilers1_lab_lectures",
+        "channel_key": "cs_stg3_onefile",
+        "message_ids": [
+            230,
+            231,
+            232,
+            233
+        ],
+        "active": true
+    },
+    {
+        "id": 45,
+        "button_label": "مادة السنة السابقة 🕐 🧮",
+        "command_key": "compilers1_lab_old",
+        "channel_key": "cs_stg3_deleted",
+        "message_ids": [
+            13
+        ],
+        "active": true
+    },
+    {
+        "id": 46,
+        "button_label": "البرنامج الي نطبق عليه Visual Studio 2010 💻 🧮",
+        "command_key": "compilers1_lab_app",
+        "channel_key": "cs_apps",
+        "message_ids": [
+            9,
+            10
+        ],
+        "active": true
+    },
+    {
+        "id": 47,
+        "button_label": "المحاضرات في ملف واحد كاملة 📁 🧮",
+        "command_key": "compilers1_theo_in_old",
+        "channel_key": "cs_stg3_deleted",
+        "message_ids": [
+            45
+        ],
+        "active": true
+    },
+    {
+        "id": 48,
+        "button_label": "كل جابتر في ملف 🗂 🧮",
+        "command_key": "compilers1_theo_lectures",
+        "channel_key": "cs_stg3_onefile",
+        "message_ids": [
+            171,
+            197,
+            254,
+            262
+        ],
+        "active": true
+    },
+    {
+        "id": 49,
+        "button_label": "كل جابتر مترجم في ملف 🇮🇶 🧮",
+        "command_key": "compilers1_theo_ar_lectures",
+        "channel_key": "cs_stg3_onefile",
+        "message_ids": [
+            199,
+            198,
+            255,
+            270
+        ],
+        "active": true
+    },
+    {
+        "id": 50,
+        "button_label": "ملخصات وتوضيحات 📝 🧮",
+        "command_key": "compilers1_theo_summarize_lectures",
+        "channel_key": "cs_stg3_onefile",
+        "message_ids": [
+            302
+        ],
+        "active": true
+    },
+    {
+        "id": 51,
+        "button_label": "محاضرات السنة السابقة 🕐 🧮",
+        "command_key": "compilers1_theo_old",
+        "channel_key": "cs_stg3_deleted",
+        "message_ids": [
+            14
+        ],
+        "active": true
+    },
+    {
+        "id": 52,
+        "button_label": "المحاضرات في ملف واحد كاملة 📁 🇬🇧",
+        "command_key": "english_in_old",
+        "channel_key": "cs_stg3_deleted",
+        "message_ids": [
+            40
+        ],
+        "active": true
+    },
+    {
+        "id": 53,
+        "button_label": "كل يونت في ملف 🗂 🇬🇧",
+        "command_key": "english_lectures",
+        "channel_key": "cs_stg3_onefile",
+        "message_ids": [
+            167,
+            173,
+            225,
+            256
+        ],
+        "active": true
+    },
+    {
+        "id": 54,
+        "button_label": "حلول كل يونت  في ملف 🇬🇧",
+        "command_key": "english_qa_lectures",
+        "channel_key": "cs_stg3_onefile",
+        "message_ids": [
+            274,
+            275,
+            272,
+            273
+        ],
+        "active": true
+    },
+    {
+        "id": 55,
+        "button_label": "محاضرات السنة السابقة 🕐 🇬🇧",
+        "command_key": "english_old",
+        "channel_key": "cs_stg3_deleted",
+        "message_ids": [
+            7
+        ],
+        "active": true
+    },
+    {
+        "id": 56,
+        "button_label": "المحاضرات في ملف واحد كاملة 📁 🔎",
+        "command_key": "operations_research_in_old",
+        "channel_key": "cs_stg3_deleted",
+        "message_ids": [
+            43
+        ],
+        "active": true
+    },
+    {
+        "id": 57,
+        "button_label": "اسئلة وحلول 📝 🔎",
+        "command_key": "operations_research_qa_lectures",
+        "channel_key": "cs_stg3_onefile",
+        "message_ids": [
+            300
+        ],
+        "active": true
+    },
+    {
+        "id": 58,
+        "button_label": "محاضرات السنة السابقة 🕐 🔎",
+        "command_key": "operations_research_old",
+        "channel_key": "cs_stg3_deleted",
+        "message_ids": [
+            8
+        ],
+        "active": true
+    },
+    {
+        "id": 59,
+        "button_label": "مادة السنة السابقة 🕐 🌐",
+        "command_key": "webprogramming_old",
+        "channel_key": "cs_stg3_deleted",
+        "message_ids": [
+            27,
+            28,
+            29
+        ],
+        "active": true
+    },
+    {
+        "id": 60,
+        "button_label": "الجابترات مترجمة + اسئلة وحلول 🇮🇶 🌐",
+        "command_key": "webprogramming_all_lectures",
+        "channel_key": "cs_stg3_onefile",
+        "message_ids": [
+            430
+        ],
+        "active": true
+    },
+    {
+        "id": 61,
+        "button_label": "البرنامج الي نطبق عليه Visual Studio Code 💻 🌐",
+        "command_key": "webprogramming_app",
+        "channel_key": "cs_apps",
+        "message_ids": [
+            27,
+            28
+        ],
+        "active": true
+    },
+    {
+        "id": 62,
+        "button_label": "المادة في ملف واحد كاملة 📁 📡",
+        "command_key": "networks2_lab_full",
+        "channel_key": "cs_stg3",
+        "message_ids": [
+            159
+        ],
+        "active": true
+    },
+    {
+        "id": 63,
+        "button_label": "كل جابتر  بملف 🗂 📡",
+        "command_key": "networks2_lab_lectures",
+        "channel_key": "cs_stg3_onefile",
+        "message_ids": [
+            397,
+            335,
+            356,
+            395,
+            396
+        ],
+        "active": true
+    },
+    {
+        "id": 64,
+        "button_label": "البرنامج الي نطبق عليه cisco packet tracer 💻 📡",
+        "command_key": "networks2_lab_app",
+        "channel_key": "cs_apps",
+        "message_ids": [
+            33,
+            34
+        ],
+        "active": true
+    },
+    {
+        "id": 65,
+        "button_label": "مادة السنة السابقة 🕐 📡",
+        "command_key": "networks2_lab_old",
+        "channel_key": "cs_stg3_deleted",
+        "message_ids": [
+            11
+        ],
+        "active": true
+    },
+    {
+        "id": 66,
+        "button_label": "المحاضرات في ملف واحد كاملة 📁 📡",
+        "command_key": "networks2_theo_full",
+        "channel_key": "cs_stg3",
+        "message_ids": [
+            158
+        ],
+        "active": true
+    },
+    {
+        "id": 67,
+        "button_label": "كل جابتر في ملف 🗂 📡",
+        "command_key": "networks2_theo_lectures",
+        "channel_key": "cs_stg3_onefile",
+        "message_ids": [
+            313,
+            325,
+            357,
+            365,
+            387,
+            407
+        ],
+        "active": true
+    },
+    {
+        "id": 68,
+        "button_label": "المحاضرات + الترجمة في ملف واحد كاملة 🇮🇶 📡",
+        "command_key": "networks2_theo_ar_all_lectures",
+        "channel_key": "cs_stg3_onefile",
+        "message_ids": [
+            371
+        ],
+        "active": true
+    },
+    {
+        "id": 69,
+        "button_label": "كل جابتر مترجم في ملف 🇮🇶 📡",
+        "command_key": "networks2_theo_ar_lectures",
+        "channel_key": "cs_stg3_onefile",
+        "message_ids": [
+            314,
+            326,
+            358,
+            368,
+            389,
+            415
+        ],
+        "active": true
+    },
+    {
+        "id": 70,
+        "button_label": "ملخصات وتوضيحات 📝 📡",
+        "command_key": "networks2_theo_summarize_lectures",
+        "channel_key": "cs_stg3_onefile",
+        "message_ids": [
+            359,
+            361,
+            372,
+            418,
+            419
+        ],
+        "active": true
+    },
+    {
+        "id": 71,
+        "button_label": "اسئلة وحلول 📝 📡",
+        "command_key": "networks2_theo_qa_lectures",
+        "channel_key": "cs_stg3_onefile",
+        "message_ids": [
+            297
+        ],
+        "active": true
+    },
+    {
+        "id": 72,
+        "button_label": "محاضرات السنة السابقة 🕐 📡",
+        "command_key": "networks2_theo_old",
+        "channel_key": "cs_stg3_deleted",
+        "message_ids": [
+            12
+        ],
+        "active": true
+    },
+    {
+        "id": 73,
+        "button_label": "المادة في ملف واحد كاملة 📁 ⚒",
+        "command_key": "data_mining_lab_full",
+        "channel_key": "cs_stg3",
+        "message_ids": [
+            155
+        ],
+        "active": true
+    },
+    {
+        "id": 74,
+        "button_label": "كل جابتر  بملف 🗂 ⚒",
+        "command_key": "data_mining_lab_lectures",
+        "channel_key": "cs_stg3_onefile",
+        "message_ids": [
+            336,
+            399,
+            400,
+            403
+        ],
+        "active": true
+    },
+    {
+        "id": 75,
+        "button_label": "ملخصات و توضيحات 📝 ⚒",
+        "command_key": "data_mining_lab_summarize_lectures",
+        "channel_key": "cs_stg3_onefile",
+        "message_ids": [
+            287
+        ],
+        "active": true
+    },
+    {
+        "id": 76,
+        "button_label": "البرنامج الي نطبق عليه Jupyter 💻 ⚒",
+        "command_key": "data_mining_lab_app",
+        "channel_key": "cs_apps",
+        "message_ids": [
+            57
+        ],
+        "active": true
+    },
+    {
+        "id": 77,
+        "button_label": "مادة السنة السابقة 🕐 ⚒",
+        "command_key": "data_mining_lab_old",
+        "channel_key": "cs_stg3_deleted",
+        "message_ids": [
+            19
+        ],
+        "active": true
+    },
+    {
+        "id": 78,
+        "button_label": "المحاضرات في ملف واحد كاملة 📁 ⚒",
+        "command_key": "data_mining_theo_full",
+        "channel_key": "cs_stg3",
+        "message_ids": [
+            154
+        ],
+        "active": true
+    },
+    {
+        "id": 79,
+        "button_label": "كل جابتر  في ملف 🗂 ⚒",
+        "command_key": "data_mining_theo_lectures",
+        "channel_key": "cs_stg3_onefile",
+        "message_ids": [
+            315,
+            321,
+            329,
+            343,
+            363,
+            378,
+            401
+        ],
+        "active": true
+    },
+    {
+        "id": 80,
+        "button_label": "المحاضرات + الترجمة في ملف واحد كاملة 🇮🇶 ⚒",
+        "command_key": "data_mining_theo_ar_all_lectures",
+        "channel_key": "cs_stg3_onefile",
+        "message_ids": [
+            369
+        ],
+        "active": true
+    },
+    {
+        "id": 81,
+        "button_label": "كل جابتر مترجم في ملف 🇮🇶 ⚒",
+        "command_key": "data_mining_theo_ar_lectures",
+        "channel_key": "cs_stg3_onefile",
+        "message_ids": [
+            316,
+            322,
+            330,
+            344,
+            364
+        ],
+        "active": true
+    },
+    {
+        "id": 82,
+        "button_label": "ملخصات وتوضيحات 📝 ⚒",
+        "command_key": "data_mining_theo_summarize_lectures",
+        "channel_key": "cs_stg3_onefile",
+        "message_ids": [
+            384,
+            420,
+            421
+        ],
+        "active": true
+    },
+    {
+        "id": 83,
+        "button_label": "محاضرات السنة السابقة 🕐 ⚒",
+        "command_key": "data_mining_theo_old",
+        "channel_key": "cs_stg3_deleted",
+        "message_ids": [
+            20
+        ],
+        "active": true
+    },
+    {
+        "id": 84,
+        "button_label": "المادة في ملف واحد كاملة 📁 🛢",
+        "command_key": "distributed_databases_lab_full",
+        "channel_key": "cs_stg3",
+        "message_ids": [
+            160
+        ],
+        "active": true
+    },
+    {
+        "id": 85,
+        "button_label": "كل جابتر  بملف 🗂 🛢",
+        "command_key": "distributed_databases_lab_lectures",
+        "channel_key": "cs_stg3_onefile",
+        "message_ids": [
+            349
+        ],
+        "active": true
+    },
+    {
+        "id": 86,
+        "button_label": "البرنامج الي نطبق عليه Visual Studio 2010 💻 🛢",
+        "command_key": "distributed_databases_lab_app",
+        "channel_key": "cs_apps",
+        "message_ids": [
+            9,
+            10
+        ],
+        "active": true
+    },
+    {
+        "id": 87,
+        "button_label": "مادة السنة السابقة 🕐 🛢",
+        "command_key": "distributed_databases_lab_old",
+        "channel_key": "cs_stg3_deleted",
+        "message_ids": [
+            23
+        ],
+        "active": true
+    },
+    {
+        "id": 88,
+        "button_label": "المحاضرات في ملف واحد كاملة 📁 🛢",
+        "command_key": "distributed_databases_theo_full",
+        "channel_key": "cs_stg3",
+        "message_ids": [
+            161
+        ],
+        "active": true
+    },
+    {
+        "id": 89,
+        "button_label": "كل جابتر  في ملف 🗂 🛢",
+        "command_key": "distributed_databases_theo_lectures",
+        "channel_key": "cs_stg3_onefile",
+        "message_ids": [
+            331,
+            392
+        ],
+        "active": true
+    },
+    {
+        "id": 90,
+        "button_label": "كل جابتر مترجم في ملف 🇮🇶 🛢",
+        "command_key": "distributed_databases_theo_ar_lectures",
+        "channel_key": "cs_stg3_onefile",
+        "message_ids": [
+            333,
+            408
+        ],
+        "active": true
+    },
+    {
+        "id": 91,
+        "button_label": "ملخصات وتوضيحات 📝 🛢",
+        "command_key": "distributed_databases_theo_summarize_lectures",
+        "channel_key": "cs_stg3_onefile",
+        "message_ids": [
+            409,
+            410
+        ],
+        "active": true
+    },
+    {
+        "id": 92,
+        "button_label": "محاضرات السنة السابقة 🕐 🛢",
+        "command_key": "distributed_databases_theo_old",
+        "channel_key": "cs_stg3_deleted",
+        "message_ids": [
+            24
+        ],
+        "active": true
+    },
+    {
+        "id": 93,
+        "button_label": "المادة في ملف واحد كاملة 📁 🔐",
+        "command_key": "data_encryption_lab_full",
+        "channel_key": "cs_stg3",
+        "message_ids": [
+            153
+        ],
+        "active": true
+    },
+    {
+        "id": 94,
+        "button_label": "كل جابتر  بملف 🗂 🔐",
+        "command_key": "data_encryption_lab_lectures",
+        "channel_key": "cs_stg3_onefile",
+        "message_ids": [
+            339,
+            355,
+            366,
+            393,
+            404,
+            405
+        ],
+        "active": true
+    },
+    {
+        "id": 95,
+        "button_label": "البرنامج الي نطبق عليه Jupyter 💻 🔐",
+        "command_key": "data_encryption_lab_app",
+        "channel_key": "cs_apps",
+        "message_ids": [
+            57,
+            58
+        ],
+        "active": true
+    },
+    {
+        "id": 96,
+        "button_label": "مادة السنة السابقة 🕐 🔐",
+        "command_key": "data_encryption_lab_old",
+        "channel_key": "cs_stg3_deleted",
+        "message_ids": [
+            21
+        ],
+        "active": true
+    },
+    {
+        "id": 97,
+        "button_label": "المحاضرات في ملف واحد كاملة 📁 🔐",
+        "command_key": "data_encryption_theo_full",
+        "channel_key": "cs_stg3",
+        "message_ids": [
+            152
+        ],
+        "active": true
+    },
+    {
+        "id": 98,
+        "button_label": "كل جابتر في ملف 🗂 🔐",
+        "command_key": "data_encryption_theo_lectures",
+        "channel_key": "cs_stg3_onefile",
+        "message_ids": [
+            308,
+            318,
+            327,
+            350,
+            351,
+            373,
+            402
+        ],
+        "active": true
+    },
+    {
+        "id": 99,
+        "button_label": "المحاضرات + الترجمة في ملف واحد كاملة 🇮🇶 🔐",
+        "command_key": "data_encryption_theo_ar_all_lectures",
+        "channel_key": "cs_stg3_onefile",
+        "message_ids": [
+            370
+        ],
+        "active": true
+    },
+    {
+        "id": 100,
+        "button_label": "كل جابتر مترجم في ملف 🇮🇶 🔐",
+        "command_key": "data_encryption_theo_ar_lectures",
+        "channel_key": "cs_stg3_onefile",
+        "message_ids": [
+            309,
+            319,
+            328,
+            367,
+            374
+        ],
+        "active": true
+    },
+    {
+        "id": 101,
+        "button_label": "ملخصات وتوضيحات 📝 🔐",
+        "command_key": "data_encryption_theo_summarize_lectures",
+        "channel_key": "cs_stg3_onefile",
+        "message_ids": [
+            416
+        ],
+        "active": true
+    },
+    {
+        "id": 102,
+        "button_label": "اسئلة وحلول 📝 🔐",
+        "command_key": "data_encryption_theo_qa_lectures",
+        "channel_key": "cs_stg3_onefile",
+        "message_ids": [
+            362
+        ],
+        "active": true
+    },
+    {
+        "id": 103,
+        "button_label": "محاضرات السنة السابقة 🕐 🔐",
+        "command_key": "data_encryption_theo_old",
+        "channel_key": "cs_stg3_deleted",
+        "message_ids": [
+            22
+        ],
+        "active": true
+    },
+    {
+        "id": 104,
+        "button_label": "المادة في ملف واحد كاملة 📁 📟",
+        "command_key": "compilers2_lab_full",
+        "channel_key": "cs_stg3",
+        "message_ids": [
+            157
+        ],
+        "active": true
+    },
+    {
+        "id": 105,
+        "button_label": "كل جابتر  بملف 🗂 📟",
+        "command_key": "compilers2_lab_lectures",
+        "channel_key": "cs_stg3_onefile",
+        "message_ids": [
+            334,
+            375,
+            376,
+            377,
+            390
+        ],
+        "active": true
+    },
+    {
+        "id": 106,
+        "button_label": "البرنامج الي نطبق عليه Dev C++ 💻 📟",
+        "command_key": "compilers2_lab_app",
+        "channel_key": "cs_apps",
+        "message_ids": [
+            18,
+            19
+        ],
+        "active": true
+    },
+    {
+        "id": 107,
+        "button_label": "مادة السنة السابقة 🕐 📟",
+        "command_key": "compilers2_lab_old",
+        "channel_key": "cs_stg3_deleted",
+        "message_ids": [
+            25
+        ],
+        "active": true
+    },
+    {
+        "id": 108,
+        "button_label": "المحاضرات في ملف واحد كاملة 📁 📟",
+        "command_key": "compilers2_theo_full",
+        "channel_key": "cs_stg3",
+        "message_ids": [
+            156
+        ],
+        "active": true
+    },
+    {
+        "id": 109,
+        "button_label": "اسئلة وحلول + ملخصات وتوضيحات 📝 📟",
+        "command_key": "compilers2_theo_summarize_lectures",
+        "channel_key": "cs_stg3_onefile",
+        "message_ids": [
+            332
+        ],
+        "active": true
+    },
+    {
+        "id": 110,
+        "button_label": "محاضرات السنة السابقة 🕐 📟",
+        "command_key": "compilers2_theo_old",
+        "channel_key": "cs_stg3_deleted",
+        "message_ids": [
+            26
+        ],
+        "active": true
+    }
+]
