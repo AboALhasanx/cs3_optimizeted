@@ -1,8 +1,6 @@
 import telebot
 import random
-import json
 import requests
-import os
 from telebot import apihelper
 apihelper.proxy = {'https': 'socks5h://127.0.0.1:9050'}
 
@@ -16,8 +14,6 @@ from config import (
     cs_stg3_deleted,
     cs_apps
 )
-
-from app_paths import CMD2VALUES_PATH, BTN2CMD_PATH
 
 from global_vars import (
     about_bot_msg,
@@ -84,23 +80,12 @@ from term2_keyboard import (
     compilers2_theo_buttons
 )
 
+from services.content_registry import ContentRegistry
+
 
 # =========[ تهيئة البوت ]=========
 bot = telebot.TeleBot(BOT_TOKEN, parse_mode=None)
-file_path = CMD2VALUES_PATH
-commands_file_path = BTN2CMD_PATH
-
-
-def load_json_file(file_path):
-    try:
-        with open(file_path, 'r', encoding='utf-8') as f:
-            return json.load(f)
-    except FileNotFoundError:
-        print(f"Error: File {file_path} not found")
-        return {}
-    except json.JSONDecodeError:
-        print(f"Error: Invalid JSON in {file_path}")
-        return {}
+content_registry = ContentRegistry()
 
 
 
@@ -570,45 +555,45 @@ def return_to_main_menu(message):
 
 
 # =========[ التعامل مع الأزرار التي لها أوامر جاهزة ]=========
-button_to_command = load_json_file(commands_file_path)
 
-@bot.message_handler(func=lambda msg: msg.text in button_to_command.keys())
+@bot.message_handler(func=lambda msg: content_registry.get_command_for_button(msg.text) is not None)
 def handle_button(message):
     log_and_forward(message)
-    command = button_to_command.get(message.text)
+    command = content_registry.get_command_for_button(message.text)
     get_file_command(message, command)
 
 
 def get_file_command(message, command):
-    data = load_json_file(file_path)
-    post_id_or_list = data.get('commands', {}).get(command)
+    content = content_registry.get_content_for_command(command)
+    if content is None:
+        bot.reply_to(message, "⏳ماكو حاليا هذا الملف")
+        return
 
-    if '_full' in command:
-        CHANNEL_ID = cs_stg3
-    elif '_lectures' in command:
-        CHANNEL_ID = cs_stg3_onefile
-    elif '_old' in command:
-        CHANNEL_ID = cs_stg3_deleted
-    elif '_app' in command:
-        CHANNEL_ID = cs_apps
-    else:
+    channel_key = content.get("channel_key")
+    channel_map = {
+        "cs_stg3": cs_stg3,
+        "cs_stg3_onefile": cs_stg3_onefile,
+        "cs_stg3_deleted": cs_stg3_deleted,
+        "cs_apps": cs_apps,
+    }
+    CHANNEL_ID = channel_map.get(channel_key)
+
+    if CHANNEL_ID is None:
+        bot.reply_to(message, "⏳ماكو حاليا هذا الملف")
+        return
+
+    message_ids = content.get("message_ids", [])
+    if not message_ids:
         bot.reply_to(message, "⏳ماكو حاليا هذا الملف")
         return
 
     message_text = "⬆️⬆️🫡"
-    if post_id_or_list:
-        try:
-            if isinstance(post_id_or_list, list):
-                for post_id in post_id_or_list:
-                    bot.forward_message(message.chat.id, CHANNEL_ID, post_id)
-                bot.reply_to(message, message_text)
-            else:
-                bot.forward_message(message.chat.id, CHANNEL_ID, post_id_or_list)
-                bot.reply_to(message, message_text)
-        except Exception as e:
-            bot.reply_to(message, "💢اكو مشكلة من البوت.\n حاول مرة ثانية")
-    else:
-        bot.reply_to(message, "⏳ماكو حاليا هذا الملف")
+    try:
+        for post_id in message_ids:
+            bot.forward_message(message.chat.id, CHANNEL_ID, post_id)
+        bot.reply_to(message, message_text)
+    except Exception as e:
+        bot.reply_to(message, "💢اكو مشكلة من البوت.\n حاول مرة ثانية")
 
 def log_and_forward(message):
     user_id = message.from_user.id
