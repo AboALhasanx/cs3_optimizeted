@@ -1,0 +1,168 @@
+{
+    "commands": {
+
+        "ai_lab_in_old": 36,
+        "ai_lab_lectures": [236, 237, 238, 239, 243, 271],
+        "ai_lab_summarize_lectures": [288, 287, 290],
+        "ai_lab_old": 9,
+        "ai_lab_app": [57, 58],
+
+        "ai_theo_in_old": 42,
+        "ai_theo_lectures": [186, 187, 188, 257, 258],
+        "ai_theo_ar_all_lectures": 189,
+        "ai_theo_summarize_lectures": [241, 299],
+        "ai_theo_qa_lectures": 299,
+        "ai_theo_old": 10,
+
+
+
+        "software_engineering_lab_in_old": 37,
+        "software_engineering_lab_lectures": [168, 169, 220, 263],
+        "software_engineering_lab_summarize_lectures": 286,
+        "software_engineering_lab_old": 15,
+        "software_engineering_lab_app": [57, 58],
+    
+        "software_engineering_theo_in_old": 39,
+        "software_engineering_theo_lectures": [182, 183, 184, 185, 190, 204, 259],
+        "software_engineering_theo_ar_all_lectures": 276,
+        "software_engineering_theo_ar_lectures": [217, 216, 215, 214, 213, 260, 261],
+        "software_engineering_theo_summarize_lectures": [284, 283, 281, 280, 277],
+        "software_engineering_theo_qa_lectures": 293,
+        "software_engineering_theo_old": 16,
+
+
+
+        "multimedia_lab_in_old": 35,
+        "multimedia_lab_lectures": null,
+        "multimedia_lab_old": 17,
+        "multimedia_lab_app": [15,16,51,52,12,13],
+    
+        "multimedia_theo_in_old": 44,
+        "multimedia_theo_lectures": [210, 209, 208, 246, 247],
+        "multimedia_theo_summarize_lectures": [211, 212],
+        "multimedia_theo_qa_lectures": 292,
+        "multimedia_theo_old": 18,
+
+
+
+        "networks1_lab_in_old": 38,
+        "networks1_lab_lectures": [221, 222, 223, 253, 265],
+        "networks1_lab_old": 11,
+        "networks1_lab_app": [33,34],
+    
+        "networks1_theo_in_old": 41,
+        "networks1_theo_lectures": [181, 180, 179, 178, 177, 176],
+        "networks1_theo_ar_all_lectures": 298,
+        "networks1_theo_ar_lectures": [234, 235, 240, 226, 264, 267],
+        "networks1_theo_summarize_lectures": [295, 296],
+        "networks1_theo_qa_lectures": 297,
+        "networks1_theo_old": 12,
+
+
+
+        "compilers1_lab_in_old": 34,
+        "compilers1_lab_lectures": [230, 231, 232, 233],
+        "compilers1_lab_old": 13,
+        "compilers1_lab_app": [9,10],
+    
+        "compilers1_theo_in_old": 45,
+        "compilers1_theo_lectures": [171, 197, 254, 262],
+        "compilers1_theo_ar_lectures": [199, 198, 255, 270],
+        "compilers1_theo_summarize_lectures": 302,
+        "compilers1_theo_old": 14,
+
+
+
+        "english_in_old": 40,
+        "english_lectures": [167, 173, 225, 256],
+        "english_qa_lectures": [274, 275, 272, 273],
+        "english_old": 7,
+
+
+
+        "operations_research_in_old": 43,
+        "operations_research_qa_lectures": 300,
+        "operations_research_old": 8,
+
+
+
+
+        "webprogramming_old": [27,28,29],
+        "webprogramming_all_lectures":430,
+        "webprogramming_app": [27,28],
+
+
+
+
+        "networks2_lab_full": 159,
+        "networks2_lab_lectures": [397, 335, 356, 395, 396],
+        "networks2_lab_old": 11,
+        "networks2_lab_app": [33,34],
+
+        "networks2_theo_full": 158,
+        "networks2_theo_ar_all_lectures": 371,
+        "networks2_theo_lectures": [313, 325, 357, 365, 387, 407],
+        "networks2_theo_ar_lectures": [314, 326, 358, 368, 389, 415],
+        "networks2_theo_summarize_lectures": [359, 361, 372, 418, 419],
+        "networks2_theo_qa_lectures": 297,
+        "networks2_theo_old": 12,
+
+
+
+
+        "data_mining_lab_full": 155,
+        "data_mining_lab_lectures": [336, 399, 400, 403],
+        "data_mining_lab_summarize_lectures": 287,
+        "data_mining_lab_old": 19,
+        "data_mining_lab_app": 57,
+
+        "data_mining_theo_full": 154,
+        "data_mining_theo_ar_all_lectures": 369,
+        "data_mining_theo_lectures": [315, 321, 329, 343, 363, 378, 401],
+        "data_mining_theo_ar_lectures": [316, 322, 330, 344, 364],
+        "data_mining_theo_summarize_lectures": [384, 420, 421],
+        "data_mining_theo_old": 20,
+
+
+
+
+        "distributed_databases_lab_full": 160,
+        "distributed_databases_lab_lectures": 349,
+        "distributed_databases_lab_app": [9,10],
+        "distributed_databases_lab_old": 23,
+
+        "distributed_databases_theo_full": 161,
+        "distributed_databases_theo_lectures": [331, 392],
+        "distributed_databases_theo_ar_lectures": [333, 408],
+        "distributed_databases_theo_summarize_lectures": [409,410],
+        "distributed_databases_theo_old": 24,
+
+
+
+
+        "data_encryption_lab_full": 153,
+        "data_encryption_lab_lectures": [339, 355, 366, 393, 404, 405],
+        "data_encryption_lab_app": [57, 58],
+        "data_encryption_lab_old": 21,
+
+        "data_encryption_theo_full": 152,
+        "data_encryption_theo_lectures": [308, 318, 327, 350, 351, 373, 402],
+        "data_encryption_theo_ar_all_lectures": 370,
+        "data_encryption_theo_ar_lectures": [309, 319, 328, 367, 374],
+        "data_encryption_theo_summarize_lectures": 416,
+        "data_encryption_theo_qa_lectures": 362,
+        "data_encryption_theo_old": 22,
+
+
+
+
+        "compilers2_lab_full": 157,
+        "compilers2_lab_lectures": [334, 375, 376, 377, 390],
+        "compilers2_lab_app": [18,19],
+        "compilers2_lab_old": 25,
+
+        "compilers2_theo_full": 156,
+        "compilers2_theo_summarize_lectures": 332,
+        "compilers2_theo_old": 26
+    }
+}

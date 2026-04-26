@@ -1,0 +1,167 @@
+{
+    "المادة في ملف واحد كاملة 📁🤖":"ai_lab_in_old",
+    "كل جابتر بملف 🗂 🤖":"ai_lab_lectures",
+    "ملخصات و توضيحات 📝 🤖":"ai_lab_summarize_lectures", 
+    "مادة السنة السابقة 🕐 🤖":"ai_lab_old",
+    "البرنامج الي نطبق عليه Jupyter 💻 🤖":"ai_lab_app",
+
+    "المحاضرات في ملف واحد كاملة 📁 🤖":"ai_theo_in_old",
+    "كل جابتر في ملف 🗂 🤖":"ai_theo_lectures",
+    "المحاضرات + الترجمة في ملف واحد كاملة 🇮🇶 🤖":"ai_theo_ar_all_lectures",
+    "ملخصات وتوضيحات 📝 🤖":"ai_theo_summarize_lectures",
+    "اسئلة وحلول 📝 🤖":"ai_theo_qa_lectures",
+    "محاضرات السنة السابقة 🕐 🤖":"ai_theo_old",
+
+
+
+    "المادة في ملف واحد كاملة 📁📐":"software_engineering_lab_in_old",
+    "كل جابتر  بملف 🗂 📐":"software_engineering_lab_lectures",
+    "ملخصات وتوضيحات 📝 📐":"software_engineering_lab_summarize_lectures",
+    "مادة السنة السابقة 🕐 📐":"software_engineering_lab_old",
+    "البرنامج الي نطبق عليه Jupyter 💻 📐":"software_engineering_lab_app",
+
+    "المحاضرات في ملف واحد كاملة 📁 📐":"software_engineering_theo_in_old",
+    "كل جابتر في ملف 🗂 📐":"software_engineering_theo_lectures",
+    "المحاضرات + الترجمة في ملف واحد كاملة 🇮🇶 📐":"software_engineering_theo_ar_all_lectures",
+    "كل جابتر مترجم في ملف 🇮🇶 📐":"software_engineering_theo_ar_lectures",
+    "ملخصات و توضيحات 📝 📐":"software_engineering_theo_summarize_lectures",
+    "اسئلة وحلول 📝 📐":"software_engineering_theo_qa_lectures",
+    "محاضرات السنة السابقة 🕐 📐":"software_engineering_theo_old",
+
+
+
+    "المادة في ملف واحد كاملة 📁🖼️":"multimedia_lab_in_old",
+    "مادة السنة السابقة 🕐 🖼️":"multimedia_lab_old",
+    "البرامج الي نطبق عليها 💻 🖼️":"multimedia_lab_app",
+
+    "المحاضرات في ملف واحد كاملة 📁 🖼️":"multimedia_theo_in_old",
+    "كل جابتر في ملف 🗂 🖼️":"multimedia_theo_lectures",
+    "ملخصات وتوضيحات 📝 🖼️":"multimedia_theo_summarize_lectures",
+    "اسئلة وحلول 📝 🖼️":"multimedia_theo_qa_lectures",
+    "محاضرات السنة السابقة 🕐 🖼️":"multimedia_theo_old",
+
+
+
+    "المادة في ملف واحد كاملة 📁🔌":"networks1_lab_in_old",
+    "كل جابتر  بملف 🗂 🔌":"networks1_lab_lectures",
+    "مادة السنة السابقة 🕐 🔌":"networks1_lab_old",
+    "البرنامج الي نطبق عليه Cisco Packet Tracer 💻 🔌":"networks1_lab_app",
+
+    "المحاضرات في ملف واحد كاملة 📁 🔌":"networks1_theo_in_old",
+    "كل جابتر في ملف 🗂 🔌":"networks1_theo_lectures",
+    "المحاضرات + الترجمة في ملف واحد كاملة 🇮🇶 🔌":"networks1_theo_ar_all_lectures",
+    "كل جابتر مترجم في ملف 🇮🇶 🔌":"networks1_theo_ar_lectures",
+    "ملخصات وتوضيحات 📝 🔌":"networks1_theo_summarize_lectures",
+    "اسئلة وحلول 📝 🔌":"networks1_theo_qa_lectures",
+    "محاضرات السنة السابقة 🕐 🔌":"networks1_theo_old",
+
+
+
+    "المادة في ملف واحد كاملة 📁🧮":"compilers1_lab_in_old",
+    "كل جابتر  بملف 🗂 🧮":"compilers1_lab_lectures",
+    "مادة السنة السابقة 🕐 🧮":"compilers1_lab_old",
+    "البرنامج الي نطبق عليه Visual Studio 2010 💻 🧮":"compilers1_lab_app",
+
+    "المحاضرات في ملف واحد كاملة 📁 🧮":"compilers1_theo_in_old",
+    "كل جابتر في ملف 🗂 🧮":"compilers1_theo_lectures",
+    "كل جابتر مترجم في ملف 🇮🇶 🧮":"compilers1_theo_ar_lectures",
+    "ملخصات وتوضيحات 📝 🧮":"compilers1_theo_summarize_lectures",
+    "محاضرات السنة السابقة 🕐 🧮":"compilers1_theo_old",
+
+
+
+    "المحاضرات في ملف واحد كاملة 📁 🇬🇧":"english_in_old",
+    "كل يونت في ملف 🗂 🇬🇧":"english_lectures",
+    "حلول كل يونت  في ملف 🇬🇧":"english_qa_lectures",
+    "محاضرات السنة السابقة 🕐 🇬🇧":"english_old",
+
+
+
+    "المحاضرات في ملف واحد كاملة 📁 🔎":"operations_research_in_old",
+    "اسئلة وحلول 📝 🔎":"operations_research_qa_lectures",
+    "محاضرات السنة السابقة 🕐 🔎":"operations_research_old",
+
+
+    "مادة السنة السابقة 🕐 🌐": "webprogramming_old",
+    "الجابترات مترجمة + اسئلة وحلول 🇮🇶 🌐": "webprogramming_all_lectures",
+    "البرنامج الي نطبق عليه Visual Studio Code 💻 🌐":"webprogramming_app",
+
+
+
+
+    "المادة في ملف واحد كاملة 📁 📡": "networks2_lab_full",
+    "كل جابتر  بملف 🗂 📡":"networks2_lab_lectures",
+    "البرنامج الي نطبق عليه cisco packet tracer 💻 📡": "networks2_lab_app",
+    "مادة السنة السابقة 🕐 📡":"networks2_lab_old",
+
+
+    "المحاضرات في ملف واحد كاملة 📁 📡": "networks2_theo_full",
+    "كل جابتر في ملف 🗂 📡":"networks2_theo_lectures",
+    "المحاضرات + الترجمة في ملف واحد كاملة 🇮🇶 📡":"networks2_theo_ar_all_lectures",
+    "كل جابتر مترجم في ملف 🇮🇶 📡":"networks2_theo_ar_lectures",
+    "ملخصات وتوضيحات 📝 📡":"networks2_theo_summarize_lectures",
+    "اسئلة وحلول 📝 📡":"networks2_theo_qa_lectures",
+    "محاضرات السنة السابقة 🕐 📡":"networks2_theo_old",
+
+
+
+
+    "المادة في ملف واحد كاملة 📁 ⚒": "data_mining_lab_full",
+    "كل جابتر  بملف 🗂 ⚒":"data_mining_lab_lectures",
+    "ملخصات و توضيحات 📝 ⚒":"data_mining_lab_summarize_lectures",
+    "البرنامج الي نطبق عليه Jupyter 💻 ⚒": "data_mining_lab_app",
+    "مادة السنة السابقة 🕐 ⚒":"data_mining_lab_old",
+
+
+    "المحاضرات في ملف واحد كاملة 📁 ⚒": "data_mining_theo_full",
+    "كل جابتر  في ملف 🗂 ⚒":"data_mining_theo_lectures",
+    "المحاضرات + الترجمة في ملف واحد كاملة 🇮🇶 ⚒":"data_mining_theo_ar_all_lectures",
+    "كل جابتر مترجم في ملف 🇮🇶 ⚒":"data_mining_theo_ar_lectures",
+    "ملخصات وتوضيحات 📝 ⚒":"data_mining_theo_summarize_lectures",
+    "محاضرات السنة السابقة 🕐 ⚒":"data_mining_theo_old",
+
+
+
+
+    "المادة في ملف واحد كاملة 📁 🛢": "distributed_databases_lab_full",
+    "كل جابتر  بملف 🗂 🛢":"distributed_databases_lab_lectures",
+    "البرنامج الي نطبق عليه Visual Studio 2010 💻 🛢": "distributed_databases_lab_app",
+    "مادة السنة السابقة 🕐 🛢":"distributed_databases_lab_old",
+
+
+    "المحاضرات في ملف واحد كاملة 📁 🛢": "distributed_databases_theo_full",
+    "كل جابتر  في ملف 🗂 🛢":"distributed_databases_theo_lectures",
+    "كل جابتر مترجم في ملف 🇮🇶 🛢":"distributed_databases_theo_ar_lectures",
+    "ملخصات وتوضيحات 📝 🛢":"distributed_databases_theo_summarize_lectures",
+    "محاضرات السنة السابقة 🕐 🛢":"distributed_databases_theo_old",
+
+
+
+
+    "المادة في ملف واحد كاملة 📁 🔐": "data_encryption_lab_full",
+    "كل جابتر  بملف 🗂 🔐":"data_encryption_lab_lectures",
+    "البرنامج الي نطبق عليه Jupyter 💻 🔐": "data_encryption_lab_app",
+    "مادة السنة السابقة 🕐 🔐":"data_encryption_lab_old",
+
+
+    "المحاضرات في ملف واحد كاملة 📁 🔐": "data_encryption_theo_full",
+    "كل جابتر في ملف 🗂 🔐": "data_encryption_theo_lectures",
+    "المحاضرات + الترجمة في ملف واحد كاملة 🇮🇶 🔐":"data_encryption_theo_ar_all_lectures",
+    "كل جابتر مترجم في ملف 🇮🇶 🔐":"data_encryption_theo_ar_lectures",
+    "ملخصات وتوضيحات 📝 🔐":"data_encryption_theo_summarize_lectures",
+    "اسئلة وحلول 📝 🔐":"data_encryption_theo_qa_lectures",
+    "محاضرات السنة السابقة 🕐 🔐":"data_encryption_theo_old",
+
+
+
+
+    "المادة في ملف واحد كاملة 📁 📟": "compilers2_lab_full",
+    "كل جابتر  بملف 🗂 📟": "compilers2_lab_lectures",
+    "البرنامج الي نطبق عليه Dev C++ 💻 📟": "compilers2_lab_app",
+    "مادة السنة السابقة 🕐 📟": "compilers2_lab_old",
+
+
+    "المحاضرات في ملف واحد كاملة 📁 📟": "compilers2_theo_full",
+    "اسئلة وحلول + ملخصات وتوضيحات 📝 📟": "compilers2_theo_summarize_lectures",
+    "محاضرات السنة السابقة 🕐 📟": "compilers2_theo_old"
+}
