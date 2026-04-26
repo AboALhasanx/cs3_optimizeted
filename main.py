@@ -91,19 +91,7 @@ file_path = CMD2VALUES_PATH
 commands_file_path = BTN2CMD_PATH
 
 
-def load_data(file_path):
-    try:
-        with open(file_path, 'r', encoding='utf-8') as f:
-            return json.load(f)
-    except FileNotFoundError:
-        print(f"Error: File {file_path} not found")
-        return {}
-    except json.JSONDecodeError:
-        print(f"Error: Invalid JSON in {file_path}")
-        return {}
-
-
-def load_commands(file_path):
+def load_json_file(file_path):
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             return json.load(f)
@@ -155,17 +143,6 @@ def load_users(): # type: ignore
 
 
 # ========== أوامر الإذاعة =============
-# تعريف رابط قاعدة بيانات Firebase ودالة load_users يجب أن يكونا موجودين مسبقاً
-FIREBASE_URL = "https://csbotproject-60ec6-default-rtdb.firebaseio.com/"
-
-def load_users():
-    try:
-        response = requests.get(f"{FIREBASE_URL}/users.json")
-        if response.status_code == 200:
-            return response.json() or {}
-    except Exception as e:
-        print(f"خطأ في جلب المستخدمين: {e}")
-    return {}
 
 def deactivate_user(uid):
     """
@@ -593,7 +570,7 @@ def return_to_main_menu(message):
 
 
 # =========[ التعامل مع الأزرار التي لها أوامر جاهزة ]=========
-button_to_command = load_commands(commands_file_path)
+button_to_command = load_json_file(commands_file_path)
 
 @bot.message_handler(func=lambda msg: msg.text in button_to_command.keys())
 def handle_button(message):
@@ -603,7 +580,7 @@ def handle_button(message):
 
 
 def get_file_command(message, command):
-    data = load_data(file_path)
+    data = load_json_file(file_path)
     post_id_or_list = data.get('commands', {}).get(command)
 
     if '_full' in command:
