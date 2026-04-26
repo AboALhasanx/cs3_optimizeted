@@ -15,8 +15,8 @@ import sys
 from collections import Counter
 
 # ---------------------------------------------------------------------------
-# Resolve paths via app_paths (add project root to sys.path so the import
-# works even when this script is launched from the scripts/ directory).
+# Path setup (add project root to sys.path so imports work when this script
+# is launched from the scripts/ directory).
 # ---------------------------------------------------------------------------
 import os.path as _osp
 _script_dir = _osp.dirname(_osp.abspath(__file__))

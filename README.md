@@ -11,7 +11,6 @@ built with [`pyTelegramBotAPI`](https://pytba.readthedocs.io/).
 cs3/
 ├── main.py                           ← Bot entry point
 ├── config.py                         ← Tokens & channel IDs
-├── app_paths.py                      ← File-path constants
 ├── global_vars.py                    ← UI strings & emoji prefixes
 ├── term1_keyboard.py                 ← Term 1 keyboard definitions
 ├── term2_keyboard.py                 ← Term 2 keyboard definitions
